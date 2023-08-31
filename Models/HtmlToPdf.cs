@@ -148,6 +148,23 @@ public enum PaperKind
     PrcEnvelopeNumber10Rotated = WkHtmlToPdfDotNet.PaperKind.PrcEnvelopeNumber10Rotated
 }
 
+public enum Unit { 
+    Inches = WkHtmlToPdfDotNet.Unit.Inches,
+    Millimeters = WkHtmlToPdfDotNet.Unit.Millimeters,
+    Centimeters = WkHtmlToPdfDotNet.Unit.Centimeters,
+}
+
+
+public class MarginSettings { 
+    public Unit Unit { get;set; } = Unit.Millimeters;
+    public double Top { get;set; } = 0;
+    public double Bottom { get;set; } = 0;
+    public double Left { get;set; } = 0;
+    public double Right { get;set; } = 0;
+
+}
+
+
 
 public class HtmlToPdfSettings
 {
@@ -498,19 +515,6 @@ public class HtmlToPdfSettings
     {
         return (HtmlContent == null) ? Array.Empty<byte>() : Encoding.GetBytes(HtmlContent);
     }
-
-
-    // is this still necessary?
-    //public static TTargetEnum ConvertEnum<TSourceEnum, TTargetEnum>(TSourceEnum sourceEnum)
-    //    where TTargetEnum : struct, Enum
-    //    where TSourceEnum : struct, Enum
-    //{
-    //    if (!Enum.IsDefined(typeof(TSourceEnum), sourceEnum))
-    //        throw new ArgumentException($"Invalid {typeof(TSourceEnum).Name} value.", nameof(sourceEnum));
-
-    //    return (TTargetEnum)Enum.ToObject(typeof(TTargetEnum), Convert.ToInt32(sourceEnum));
-    //}
-
 
 
 }

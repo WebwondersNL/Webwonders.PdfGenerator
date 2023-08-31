@@ -193,7 +193,7 @@ public class HtmlToPdfService : IHtmlToPdfService
                 ImageQuality = settings.ImageQuality,
                 CookieJar = settings.CookieJar,
                 PaperSize = (WkHtmlToPdfDotNet.PaperKind)settings.PaperSize,
-                Margins = settings.Margins,
+                Margins = new WkHtmlToPdfDotNet.MarginSettings(settings.Margins.Top, settings.Margins.Right, settings.Margins.Bottom, settings.Margins.Left),
             },
             Objects = {
                 new ObjectSettings{
