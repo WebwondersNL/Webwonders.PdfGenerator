@@ -46,6 +46,22 @@
           }
         }
       },
+      "CSharpTest.Net.Collections-NetStd2/14.906.1403.1084": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CSharpTest.Net.Collections.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/CSharpTest.Net.Collections.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Dazinator.Extensions.FileProviders/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -71,11 +87,11 @@
           "lib/netcoreapp2.1/DotNet.Glob.dll": {}
         }
       },
-      "Examine/3.0.1": {
+      "Examine/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Examine.Core": "3.0.1",
-          "Examine.Lucene": "3.0.1",
+          "Examine.Core": "3.0.0",
+          "Examine.Lucene": "3.0.0",
           "Microsoft.AspNetCore.DataProtection": "5.0.5",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
         },
@@ -86,7 +102,7 @@
           "lib/netstandard2.0/Examine.dll": {}
         }
       },
-      "Examine.Core/3.0.1": {
+      "Examine.Core/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
@@ -99,10 +115,10 @@
           "lib/netstandard2.0/Examine.Core.dll": {}
         }
       },
-      "Examine.Lucene/3.0.1": {
+      "Examine.Lucene/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Examine.Core": "3.0.1",
+          "Examine.Core": "3.0.0",
           "Lucene.Net.QueryParser": "4.8.0-beta00016",
           "Lucene.Net.Replicator": "4.8.0-beta00016",
           "System.Threading": "4.3.0",
@@ -670,7 +686,7 @@
           "build/_._": {}
         }
       },
-      "Microsoft.CodeAnalysis.Common/4.0.0": {
+      "Microsoft.CodeAnalysis.Common/4.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.3.2",
@@ -733,10 +749,10 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp/4.0.0": {
+      "Microsoft.CodeAnalysis.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "[4.0.0]"
+          "Microsoft.CodeAnalysis.Common": "[4.0.1]"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
@@ -1767,15 +1783,15 @@
           }
         }
       },
-      "NUglify/1.20.2": {
+      "NUglify/1.13.12": {
         "type": "package",
         "compile": {
-          "lib/net5.0/NUglify.dll": {
+          "lib/netstandard2.0/NUglify.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/NUglify.dll": {
+          "lib/netstandard2.0/NUglify.dll": {
             "related": ".xml"
           }
         }
@@ -1833,7 +1849,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/debian.8-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1842,7 +1858,7 @@
           }
         }
       },
-      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/fedora.23-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1851,7 +1867,7 @@
           }
         }
       },
-      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/fedora.24-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1911,19 +1927,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "dependencies": {
-          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1932,7 +1948,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/opensuse.13.2-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1941,7 +1957,7 @@
           }
         }
       },
-      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/opensuse.42.1-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1959,7 +1975,7 @@
           }
         }
       },
-      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.OpenSsl.dylib": {
@@ -1968,7 +1984,7 @@
           }
         }
       },
-      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/rhel.7-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1977,7 +1993,7 @@
           }
         }
       },
-      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/ubuntu.14.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1986,7 +2002,7 @@
           }
         }
       },
-      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/ubuntu.16.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -1995,7 +2011,7 @@
           }
         }
       },
-      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so": {
@@ -2273,7 +2289,7 @@
           }
         }
       },
-      "SixLabors.ImageSharp/2.1.3": {
+      "SixLabors.ImageSharp/2.1.2": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "5.0.0",
@@ -2290,11 +2306,11 @@
           }
         }
       },
-      "SixLabors.ImageSharp.Web/2.0.2": {
+      "SixLabors.ImageSharp.Web/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.IO.RecyclableMemoryStream": "2.2.0",
-          "SixLabors.ImageSharp": "2.1.3"
+          "SixLabors.ImageSharp": "2.1.2"
         },
         "compile": {
           "lib/netcoreapp3.1/SixLabors.ImageSharp.Web.dll": {
@@ -2310,10 +2326,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Smidge/4.2.0": {
+      "Smidge/4.1.0": {
         "type": "package",
         "dependencies": {
-          "Smidge.Core": "4.2.0"
+          "Smidge.Core": "4.1.0"
         },
         "compile": {
           "lib/net5.0/Smidge.dll": {}
@@ -2325,7 +2341,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Smidge.Core/4.2.0": {
+      "Smidge.Core/4.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.0",
@@ -2343,11 +2359,11 @@
           "lib/net5.0/Smidge.Core.dll": {}
         }
       },
-      "Smidge.InMemory/4.2.0": {
+      "Smidge.InMemory/4.1.0": {
         "type": "package",
         "dependencies": {
           "Dazinator.Extensions.FileProviders": "2.0.0",
-          "Smidge.Core": "4.2.0",
+          "Smidge.Core": "4.1.0",
           "System.Text.Encodings.Web": "5.0.1"
         },
         "compile": {
@@ -2357,11 +2373,11 @@
           "lib/net5.0/Smidge.InMemory.dll": {}
         }
       },
-      "Smidge.Nuglify/4.2.0": {
+      "Smidge.Nuglify/4.1.0": {
         "type": "package",
         "dependencies": {
-          "Nuglify": "1.20.2",
-          "Smidge": "4.2.0"
+          "Nuglify": "1.13.12",
+          "Smidge": "4.1.0"
         },
         "compile": {
           "lib/net5.0/Smidge.Nuglify.dll": {}
@@ -2968,10 +2984,10 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "System.Net.Http/4.3.4": {
+      "System.Net.Http/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Platforms": "1.1.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
@@ -2996,10 +3012,12 @@
           "System.Threading.Tasks": "4.3.0",
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Net.Http.dll": {}
+          "ref/netstandard1.3/System.Net.Http.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
@@ -3622,24 +3640,21 @@
           }
         }
       },
-      "System.Security.Cryptography.Xml/6.0.1": {
+      "System.Security.Cryptography.Xml/5.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "6.0.0",
-          "System.Security.Cryptography.Pkcs": "6.0.1"
+          "System.Security.Cryptography.Pkcs": "5.0.0",
+          "System.Security.Permissions": "5.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Security.Cryptography.Xml.dll": {
+          "ref/netstandard2.0/System.Security.Cryptography.Xml.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Security.Cryptography.Xml.dll": {
+          "lib/netstandard2.0/System.Security.Cryptography.Xml.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Security.Permissions/6.0.0": {
@@ -3779,10 +3794,10 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.Text.RegularExpressions/4.3.1": {
+      "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime": "4.3.1"
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netcoreapp1.1/System.Text.RegularExpressions.dll": {}
@@ -3990,7 +4005,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Umbraco.Cms.Core/10.6.1": {
+      "Umbraco.Cms.Core/10.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
@@ -4003,11 +4018,8 @@
           "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0",
           "Microsoft.Extensions.Options.DataAnnotations": "6.0.0",
           "System.ComponentModel.Annotations": "5.0.0",
-          "System.Net.Http": "4.3.4",
           "System.Reflection.Emit.Lightweight": "4.7.0",
-          "System.Runtime.Caching": "6.0.0",
-          "System.Security.Cryptography.Xml": "6.0.1",
-          "System.Text.RegularExpressions": "4.3.1"
+          "System.Runtime.Caching": "6.0.0"
         },
         "compile": {
           "lib/net6.0/Umbraco.Core.dll": {
@@ -4020,12 +4032,12 @@
           }
         }
       },
-      "Umbraco.Cms.Examine.Lucene/10.6.1": {
+      "Umbraco.Cms.Examine.Lucene/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Examine": "3.0.1",
-          "Umbraco.Cms.Core": "10.6.1",
-          "Umbraco.Cms.Infrastructure": "10.6.1"
+          "Examine": "3.0.0",
+          "Umbraco.Cms.Core": "10.0.0",
+          "Umbraco.Cms.Infrastructure": "10.0.0"
         },
         "compile": {
           "lib/net6.0/Umbraco.Examine.Lucene.dll": {
@@ -4038,15 +4050,16 @@
           }
         }
       },
-      "Umbraco.Cms.Infrastructure/10.6.1": {
+      "Umbraco.Cms.Infrastructure/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Examine.Core": "3.0.1",
+          "Examine.Core": "3.0.0",
           "HtmlAgilityPack": "1.11.43",
           "IPNetwork2": "2.5.422",
           "MailKit": "3.2.0",
           "Markdown": "2.2.1",
           "Microsoft.CSharp": "4.7.0",
+          "Microsoft.CodeAnalysis.CSharp": "4.0.1",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -4066,11 +4079,12 @@
           "Serilog.Sinks.Async": "1.5.0",
           "Serilog.Sinks.File": "5.0.0",
           "Serilog.Sinks.Map": "1.0.2",
-          "SixLabors.ImageSharp": "2.1.3",
+          "SixLabors.ImageSharp": "2.1.2",
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Security.Cryptography.Pkcs": "6.0.1",
+          "System.Text.Encodings.Web": "6.0.0",
           "System.Threading.Tasks.Dataflow": "6.0.0",
-          "Umbraco.Cms.Core": "10.6.1",
+          "Umbraco.Cms.Core": "10.0.0",
           "ncrontab": "3.3.1"
         },
         "compile": {
@@ -4084,15 +4098,15 @@
           }
         }
       },
-      "Umbraco.Cms.PublishedCache.NuCache/10.6.1": {
+      "Umbraco.Cms.PublishedCache.NuCache/10.0.0": {
         "type": "package",
         "dependencies": {
+          "CSharpTest.Net.Collections-NetStd2": "14.906.1403.1084",
           "K4os.Compression.LZ4": "1.2.16",
           "MessagePack": "2.3.85",
           "Newtonsoft.Json": "13.0.1",
-          "Umbraco.CSharpTest.Net.Collections": "14.906.1403.1085",
-          "Umbraco.Cms.Core": "10.6.1",
-          "Umbraco.Cms.Infrastructure": "10.6.1"
+          "Umbraco.Cms.Core": "10.0.0",
+          "Umbraco.Cms.Infrastructure": "10.0.0"
         },
         "compile": {
           "lib/net6.0/Umbraco.PublishedCache.NuCache.dll": {
@@ -4105,15 +4119,15 @@
           }
         }
       },
-      "Umbraco.Cms.Web.BackOffice/10.6.1": {
+      "Umbraco.Cms.Web.BackOffice/10.0.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "Serilog.AspNetCore": "5.0.0",
-          "Umbraco.Cms.Core": "10.6.1",
-          "Umbraco.Cms.Examine.Lucene": "10.6.1",
-          "Umbraco.Cms.Infrastructure": "10.6.1",
-          "Umbraco.Cms.Web.Common": "10.6.1"
+          "Umbraco.Cms.Core": "10.0.0",
+          "Umbraco.Cms.Examine.Lucene": "10.0.0",
+          "Umbraco.Cms.Infrastructure": "10.0.0",
+          "Umbraco.Cms.Web.Common": "10.0.0"
         },
         "compile": {
           "lib/net6.0/Umbraco.Web.BackOffice.dll": {
@@ -4129,7 +4143,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Umbraco.Cms.Web.Common/10.6.1": {
+      "Umbraco.Cms.Web.Common/10.0.0": {
         "type": "package",
         "dependencies": {
           "Dazinator.Extensions.FileProviders": "2.0.0",
@@ -4137,13 +4151,13 @@
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.5",
           "MiniProfiler.AspNetCore.Mvc": "4.2.22",
           "Serilog.AspNetCore": "5.0.0",
-          "SixLabors.ImageSharp.Web": "2.0.2",
-          "Smidge.InMemory": "4.2.0",
-          "Smidge.Nuglify": "4.2.0",
-          "Umbraco.Cms.Core": "10.6.1",
-          "Umbraco.Cms.Examine.Lucene": "10.6.1",
-          "Umbraco.Cms.Infrastructure": "10.6.1",
-          "Umbraco.Cms.PublishedCache.NuCache": "10.6.1"
+          "SixLabors.ImageSharp.Web": "2.0.1",
+          "Smidge.InMemory": "4.1.0",
+          "Smidge.Nuglify": "4.1.0",
+          "Umbraco.Cms.Core": "10.0.0",
+          "Umbraco.Cms.Examine.Lucene": "10.0.0",
+          "Umbraco.Cms.Infrastructure": "10.0.0",
+          "Umbraco.Cms.PublishedCache.NuCache": "10.0.0"
         },
         "compile": {
           "lib/net6.0/Umbraco.Web.Common.dll": {
@@ -4159,12 +4173,12 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Umbraco.Cms.Web.Website/10.6.1": {
+      "Umbraco.Cms.Web.Website/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Umbraco.Cms.Core": "10.6.1",
-          "Umbraco.Cms.Infrastructure": "10.6.1",
-          "Umbraco.Cms.Web.Common": "10.6.1"
+          "Umbraco.Cms.Core": "10.0.0",
+          "Umbraco.Cms.Infrastructure": "10.0.0",
+          "Umbraco.Cms.Web.Common": "10.0.0"
         },
         "compile": {
           "lib/net6.0/Umbraco.Web.Website.dll": {
@@ -4179,22 +4193,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "Umbraco.CSharpTest.Net.Collections/14.906.1403.1085": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/CSharpTest.Net.Collections.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/CSharpTest.Net.Collections.dll": {}
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
       },
       "Webwonders.Umbraco.Extensions/10.5.2": {
         "type": "package",
@@ -4253,6 +4251,20 @@
         "pkgicon.png"
       ]
     },
+    "CSharpTest.Net.Collections-NetStd2/14.906.1403.1084": {
+      "sha512": "g3QSH0PMiO+f2C6Za+uUvcdihnVs5IFbZ2cnKjCYA19l8en3fVe/Jl0qQS2te1xJzEOrY4ccen5/MY/QVoamcQ==",
+      "type": "package",
+      "path": "csharptest.net.collections-netstd2/14.906.1403.1084",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/README.htm",
+        "contentFiles/any/netstandard2.0/README.htm",
+        "csharptest.net.collections-netstd2.14.906.1403.1084.nupkg.sha512",
+        "csharptest.net.collections-netstd2.nuspec",
+        "lib/netstandard2.0/CSharpTest.Net.Collections.dll"
+      ]
+    },
     "Dazinator.Extensions.FileProviders/2.0.0": {
       "sha512": "Jb10uIvdGdaaOmEGUXeO1ssjp6YuvOuR87B5gLxGORFbroV1j7PDaVfEIgni7vV8KRcyAY5KvuMxgx6ADIEXNw==",
       "type": "package",
@@ -4283,40 +4295,40 @@
         "lib/netstandard2.1/DotNet.Glob.dll"
       ]
     },
-    "Examine/3.0.1": {
-      "sha512": "eIlGLnVgD5oWKHaK3ajQqcvYceSuRWWdXgbqp23Q61zgD61QvKFD00ZBqRL/F6pv1v1E90lOVuRl3Oya3wXIyA==",
+    "Examine/3.0.0": {
+      "sha512": "E7cUGKUU5lj5zykXDQI75a5PONpNY5d4+9O1W889z7Z9NtUZoZtEv93bNbLyr6PiNedK4prPUISAs4rfCQlIOA==",
       "type": "package",
-      "path": "examine/3.0.1",
+      "path": "examine/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "examine.3.0.1.nupkg.sha512",
+        "examine.3.0.0.nupkg.sha512",
         "examine.nuspec",
         "lib/netstandard2.0/Examine.dll",
         "logo-round-small.png"
       ]
     },
-    "Examine.Core/3.0.1": {
-      "sha512": "7QMWHfcXbkSFBwfFq+oobp3M6tSDYjeU/DuY+dOohyDxEPJ5sOPQae2Qll+YLN5xxtX1/j7okkiVUynP6Upnnw==",
+    "Examine.Core/3.0.0": {
+      "sha512": "nz0DyNUiouDcEsIz2uhnENw+JN4mPiQ1EaLVPAggDleI0KhXiLfl8RiPP2yU1VfNPhqIQhL1qq1/kJbJlY+dgA==",
       "type": "package",
-      "path": "examine.core/3.0.1",
+      "path": "examine.core/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "examine.core.3.0.1.nupkg.sha512",
+        "examine.core.3.0.0.nupkg.sha512",
         "examine.core.nuspec",
         "lib/netstandard2.0/Examine.Core.dll",
         "logo-round-small.png"
       ]
     },
-    "Examine.Lucene/3.0.1": {
-      "sha512": "+3IOPaJBypQgH8xejB2B4jOMioET/7pdxVqwBNFXN5Z+GG1d8lG4zs4s64CGlbOYGYyqnqkCNfm+FNUK44iQYw==",
+    "Examine.Lucene/3.0.0": {
+      "sha512": "XKn+zu+fKNutY+okrR3PWzxFG1IR/14feDPj6auWV0jVjBr1S3u/igRiXP022mnnKs7VGf8YR+9xs94C+ScZpg==",
       "type": "package",
-      "path": "examine.lucene/3.0.1",
+      "path": "examine.lucene/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "examine.lucene.3.0.1.nupkg.sha512",
+        "examine.lucene.3.0.0.nupkg.sha512",
         "examine.lucene.nuspec",
         "lib/netstandard2.0/Examine.Lucene.dll",
         "logo-round-small.png"
@@ -5114,10 +5126,10 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.CodeAnalysis.Common/4.0.0": {
-      "sha512": "d02ybMhUJl1r/dI6SkJPHrTiTzXBYCZeJdOLMckV+jyoMU/GGkjqFX/sRbv1K0QmlpwwKuLTiYVQvfYC+8ox2g==",
+    "Microsoft.CodeAnalysis.Common/4.0.1": {
+      "sha512": "SMREwaVD5SzatlWhh9aahQAtSWdb63NcE//f+bQzgHSECU6xtDtaxk0kwV+asdFfr6HtW38UeO6jvqdfzudg3w==",
       "type": "package",
-      "path": "microsoft.codeanalysis.common/4.0.0",
+      "path": "microsoft.codeanalysis.common/4.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5155,14 +5167,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "microsoft.codeanalysis.common.4.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.common.4.0.1.nupkg.sha512",
         "microsoft.codeanalysis.common.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.CSharp/4.0.0": {
-      "sha512": "2UVTGtyQGgTCazvnT6t82f+7AV2L+kqJdyb61rT9GQed4yK+tVh5IkaKcsm70VqyZQhBbDqsfZFNHnY65xhrRw==",
+    "Microsoft.CodeAnalysis.CSharp/4.0.1": {
+      "sha512": "Q9RxxydPpUElj/x1/qykDTUGsRoKbJG8H5XUSeMGmMu54fBiuX1xyanom9caa1oQfh5JIW1BgLxobSaWs4WyHQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.csharp/4.0.0",
+      "path": "microsoft.codeanalysis.csharp/4.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5200,7 +5212,7 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "microsoft.codeanalysis.csharp.4.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.csharp.4.0.1.nupkg.sha512",
         "microsoft.codeanalysis.csharp.nuspec"
       ]
     },
@@ -6484,10 +6496,10 @@
         "npoi.nuspec"
       ]
     },
-    "NUglify/1.20.2": {
-      "sha512": "vz/SjCdpxr0Jp09VzMeezid7rwbXimik2QO1dzxzDcN3bXGJloDGDVh0zoD6DA23y6yrRzxv1ZKJ3kKzV3rqyA==",
+    "NUglify/1.13.12": {
+      "sha512": "+13YE9UjnXx4+NKP+j1Axiz/QAMtK++ZtG61u9iiR2/WzPzr7EfBDOwj+xHNyTEMS9Emq/mCyWaBGjCABhC0HQ==",
       "type": "package",
-      "path": "nuglify/1.20.2",
+      "path": "nuglify/1.13.12",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6495,13 +6507,11 @@
         "lib/net35/NUglify.xml",
         "lib/net40/NUglify.dll",
         "lib/net40/NUglify.xml",
-        "lib/net5.0/NUglify.dll",
-        "lib/net5.0/NUglify.xml",
         "lib/netstandard1.3/NUglify.dll",
         "lib/netstandard1.3/NUglify.xml",
         "lib/netstandard2.0/NUglify.dll",
         "lib/netstandard2.0/NUglify.xml",
-        "nuglify.1.20.2.nupkg.sha512",
+        "nuglify.1.13.12.nupkg.sha512",
         "nuglify.nuspec",
         "nuglify.png"
       ]
@@ -6564,44 +6574,41 @@
         "razorlight.nuspec"
       ]
     },
-    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "7VSGO0URRKoMEAq0Sc9cRz8mb6zbyx/BZDEWhgPdzzpmFhkam3fJ1DAGWFXBI4nGlma+uPKpfuMQP5LXRnOH5g==",
+    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
-      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/debian.8-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "0oAaTAm6e2oVH+/Zttt0cuhGaePQYKII1dY8iaqP7CvOpVKgLybKRFvQjXR2LtxXOXTVPNv14j0ot8uV+HrUmw==",
+    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "+yH1a49wJMy8Zt4yx5RhJrxO/DBDByAiCzNwiETI+1S4mPdCu0OY4djdciC7Vssk0l22wQaDLrXxXkp+3+7bVA==",
       "type": "package",
-      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/fedora.23-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "G24ibsCNi5Kbz0oXWynBoRgtGvsw5ZSVEWjv13/KiCAM8C6wz9zzcCniMeQFIkJ2tasjo2kXlvlBZhplL51kGg==",
+    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
       "type": "package",
-      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/fedora.24-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
@@ -6659,44 +6666,42 @@
         "runtime.native.system.security.cryptography.apple.nuspec"
       ]
     },
-    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "QR1OwtwehHxSeQvZKXe+iSd+d3XZNkEcuWMFYa2i0aG1l+lR739HPicKMlTbJst3spmeekDVBUS7SeS26s4U/g==",
+    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "NS1U+700m4KFRHR5o4vo9DSlTmlCKu/u7dtE5sUHVIPB+xpXxYQvgBgA6wEIeCz6Yfn0Z52/72WYsToCEPJnrw==",
       "type": "package",
-      "path": "runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.native.system.security.cryptography.openssl.nuspec"
       ]
     },
-    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "I+GNKGg2xCHueRd1m9PzeEW7WLbNNLznmTuEi8/vZX71HudUbx1UTwlGkiwMri7JLl8hGaIAWnA/GONhu+LOyQ==",
+    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
       "type": "package",
-      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/opensuse.13.2-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "1Z3TAq1ytS1IBRtPXJvEUZdVsfWfeNEhBkbiOCGEl9wwAfsjP2lz3ZFDx5tq8p60/EqbS0HItG5piHuB71RjoA==",
+    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
       "type": "package",
-      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/opensuse.42.1-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
@@ -6715,72 +6720,67 @@
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.Apple.dylib"
       ]
     },
-    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "6mU/cVmmHtQiDXhnzUImxIcDL48GbTk+TsptXyJA+MIOG9LRjPoAQC/qBFB7X+UNyK86bmvGwC8t+M66wsYC8w==",
+    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
       "type": "package",
-      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.OpenSsl.dylib"
       ]
     },
-    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "vjwG0GGcTW/PPg6KVud8F9GLWYuAV1rrw1BKAqY0oh4jcUqg15oYF1+qkGR2x2ZHM4DQnWKQ7cJgYbfncz/lYg==",
+    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
       "type": "package",
-      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/rhel.7-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "7KMFpTkHC/zoExs+PwP8jDCWcrK9H6L7soowT80CUx3e+nxP/AFnq0AQAW5W76z2WYbLAYCRyPfwYFG6zkvQRw==",
+    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
-      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.14.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "xrlmRCnKZJLHxyyLIqkZjNXqgxnKdZxfItrPkjI+6pkRo5lHX8YvSZlWrSI5AVwLMi4HbNWP7064hcAWeZKp5w==",
+    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
       "type": "package",
-      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "leXiwfiIkW7Gmn7cgnNcdtNAU70SjmKW3jxGj1iKHOvdn0zRWsgv/l2OJUO5zdGdiv2VRFnAsxxhDgMzofPdWg==",
+    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "type": "package",
-      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
@@ -7097,10 +7097,10 @@
         "sharpziplib.nuspec"
       ]
     },
-    "SixLabors.ImageSharp/2.1.3": {
-      "sha512": "8yonNRWX3vUE9k29ta0Hbfa0AEc0hbDjSH/nZ3vOTJEXmY6hLnGsjDKoz96Z+AgOsrdkAu6PdL/Ebaf70aitzw==",
+    "SixLabors.ImageSharp/2.1.2": {
+      "sha512": "In0pC521LqJXJXZgFVHegvSzES10KkKRN31McxqA1+fKtKsNe+EShWavBFQnKRlXCdeAmfx/wDjLILbvCaq+8Q==",
       "type": "package",
-      "path": "sixlabors.imagesharp/2.1.3",
+      "path": "sixlabors.imagesharp/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7115,14 +7115,14 @@
         "lib/netstandard2.1/SixLabors.ImageSharp.dll",
         "lib/netstandard2.1/SixLabors.ImageSharp.xml",
         "sixlabors.imagesharp.128.png",
-        "sixlabors.imagesharp.2.1.3.nupkg.sha512",
+        "sixlabors.imagesharp.2.1.2.nupkg.sha512",
         "sixlabors.imagesharp.nuspec"
       ]
     },
-    "SixLabors.ImageSharp.Web/2.0.2": {
-      "sha512": "nfc15qsWS7mKSkdHTDUrOcEU2DwAFrl1/wCG7IoOalZQmk73F8uztT6csLLivQ5mIi3gpMXW2JAITaDVG5SdaQ==",
+    "SixLabors.ImageSharp.Web/2.0.1": {
+      "sha512": "g9MvpL04OmBmRzpozckI8KL/R9X8/EuxdEi6bkjCi3lMVYXQqjQs0AYcPC9i4TAr0+0QERR4YtbOfnoJ1bqSxQ==",
       "type": "package",
-      "path": "sixlabors.imagesharp.web/2.0.2",
+      "path": "sixlabors.imagesharp.web/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7131,63 +7131,63 @@
         "lib/netcoreapp3.1/SixLabors.ImageSharp.Web.dll",
         "lib/netcoreapp3.1/SixLabors.ImageSharp.Web.xml",
         "sixlabors.imagesharp.web.128.png",
-        "sixlabors.imagesharp.web.2.0.2.nupkg.sha512",
+        "sixlabors.imagesharp.web.2.0.1.nupkg.sha512",
         "sixlabors.imagesharp.web.nuspec"
       ]
     },
-    "Smidge/4.2.0": {
-      "sha512": "8b6Av/P44s1jc8d5MKrXaiv7J3G4wI4Ew5COk/FLCF5iqA0471lZ9J8Ew9mb6Nr9zD3mNwxjWnW2k9BzcUgcog==",
+    "Smidge/4.1.0": {
+      "sha512": "5ZBLseK1XssQSxbdzv9M8wPbuHTdpAwwkkxWiKLuw9JsbqewGeDLTzb6wb4rvxLT7gxZrtLKdteRKXuLS7UrfQ==",
       "type": "package",
-      "path": "smidge/4.2.0",
+      "path": "smidge/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net5.0/Smidge.dll",
         "lib/netcoreapp3.1/Smidge.dll",
         "logo-nuget.png",
-        "smidge.4.2.0.nupkg.sha512",
+        "smidge.4.1.0.nupkg.sha512",
         "smidge.nuspec"
       ]
     },
-    "Smidge.Core/4.2.0": {
-      "sha512": "LQlEtYUNVqK0/jj/kXgIgQrgwteJ7/7dK3GS5vnK8jYpJj201Etidt8IPbp6hmLJ+uOUL530XS0ZDg0xW5YoHg==",
+    "Smidge.Core/4.1.0": {
+      "sha512": "Xn8g5phs0oQrXhRl08eHm+XS1VebHIFB9pHcSes3FZZoZOPVWUKFbk7DWNDNvl6bd2FEfVzvx7hKyu0/7NW3hg==",
       "type": "package",
-      "path": "smidge.core/4.2.0",
+      "path": "smidge.core/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net5.0/Smidge.Core.dll",
         "lib/netcoreapp3.1/Smidge.Core.dll",
         "logo-nuget.png",
-        "smidge.core.4.2.0.nupkg.sha512",
+        "smidge.core.4.1.0.nupkg.sha512",
         "smidge.core.nuspec"
       ]
     },
-    "Smidge.InMemory/4.2.0": {
-      "sha512": "EFVXwKLF6/RSI0EP7D+LSDI04Y1V2XYHZT2rOzWVqMhMmPtKosxnGRv235qbyYWM4ci3u08lca3T3SWA61/QMw==",
+    "Smidge.InMemory/4.1.0": {
+      "sha512": "Nmrf81XdU12akYBCn93pm5BdgwcP9oKmNBvG6ZZl6iPCni17oUuB+OzL9TBjyWRFdPcTc6FsxTSFhSIVxFThGA==",
       "type": "package",
-      "path": "smidge.inmemory/4.2.0",
+      "path": "smidge.inmemory/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net5.0/Smidge.InMemory.dll",
         "lib/netcoreapp3.1/Smidge.InMemory.dll",
         "logo-nuget.png",
-        "smidge.inmemory.4.2.0.nupkg.sha512",
+        "smidge.inmemory.4.1.0.nupkg.sha512",
         "smidge.inmemory.nuspec"
       ]
     },
-    "Smidge.Nuglify/4.2.0": {
-      "sha512": "tqBk9P1+cSjN6SnvINyvIvpoIrA337jnBvBvxJi9UquLyDP7dc3mkxkfsqUhQMYFNJ3hMMqg+VGAa5XsxzNWUA==",
+    "Smidge.Nuglify/4.1.0": {
+      "sha512": "8Xb7wucqmGdmainAS0sPtcFV/OvJ3ZoH84GjQGXWehMS/WAJJWY3LDpuGJi7FxL/1ojTbT5GqmpDqAOQfH46OQ==",
       "type": "package",
-      "path": "smidge.nuglify/4.2.0",
+      "path": "smidge.nuglify/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net5.0/Smidge.Nuglify.dll",
         "lib/netcoreapp3.1/Smidge.Nuglify.dll",
         "logo-nuget.png",
-        "smidge.nuglify.4.2.0.nupkg.sha512",
+        "smidge.nuglify.4.1.0.nupkg.sha512",
         "smidge.nuglify.nuspec"
       ]
     },
@@ -8856,10 +8856,10 @@
         "version.txt"
       ]
     },
-    "System.Net.Http/4.3.4": {
-      "sha512": "aOa2d51SEbmM+H+Csw7yJOuNZoHkrP2XnAurye5HWYgGVVU54YZDvsLUYRv6h18X3sPnjNCANmN7ZhIPiqMcjA==",
+    "System.Net.Http/4.3.0": {
+      "sha512": "sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
       "type": "package",
-      "path": "system.net.http/4.3.4",
+      "path": "system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8881,9 +8881,49 @@
         "ref/monotouch10/_._",
         "ref/net45/_._",
         "ref/net46/System.Net.Http.dll",
+        "ref/net46/System.Net.Http.xml",
+        "ref/net46/de/System.Net.Http.xml",
+        "ref/net46/es/System.Net.Http.xml",
+        "ref/net46/fr/System.Net.Http.xml",
+        "ref/net46/it/System.Net.Http.xml",
+        "ref/net46/ja/System.Net.Http.xml",
+        "ref/net46/ko/System.Net.Http.xml",
+        "ref/net46/ru/System.Net.Http.xml",
+        "ref/net46/zh-hans/System.Net.Http.xml",
+        "ref/net46/zh-hant/System.Net.Http.xml",
         "ref/netcore50/System.Net.Http.dll",
+        "ref/netcore50/System.Net.Http.xml",
+        "ref/netcore50/de/System.Net.Http.xml",
+        "ref/netcore50/es/System.Net.Http.xml",
+        "ref/netcore50/fr/System.Net.Http.xml",
+        "ref/netcore50/it/System.Net.Http.xml",
+        "ref/netcore50/ja/System.Net.Http.xml",
+        "ref/netcore50/ko/System.Net.Http.xml",
+        "ref/netcore50/ru/System.Net.Http.xml",
+        "ref/netcore50/zh-hans/System.Net.Http.xml",
+        "ref/netcore50/zh-hant/System.Net.Http.xml",
         "ref/netstandard1.1/System.Net.Http.dll",
+        "ref/netstandard1.1/System.Net.Http.xml",
+        "ref/netstandard1.1/de/System.Net.Http.xml",
+        "ref/netstandard1.1/es/System.Net.Http.xml",
+        "ref/netstandard1.1/fr/System.Net.Http.xml",
+        "ref/netstandard1.1/it/System.Net.Http.xml",
+        "ref/netstandard1.1/ja/System.Net.Http.xml",
+        "ref/netstandard1.1/ko/System.Net.Http.xml",
+        "ref/netstandard1.1/ru/System.Net.Http.xml",
+        "ref/netstandard1.1/zh-hans/System.Net.Http.xml",
+        "ref/netstandard1.1/zh-hant/System.Net.Http.xml",
         "ref/netstandard1.3/System.Net.Http.dll",
+        "ref/netstandard1.3/System.Net.Http.xml",
+        "ref/netstandard1.3/de/System.Net.Http.xml",
+        "ref/netstandard1.3/es/System.Net.Http.xml",
+        "ref/netstandard1.3/fr/System.Net.Http.xml",
+        "ref/netstandard1.3/it/System.Net.Http.xml",
+        "ref/netstandard1.3/ja/System.Net.Http.xml",
+        "ref/netstandard1.3/ko/System.Net.Http.xml",
+        "ref/netstandard1.3/ru/System.Net.Http.xml",
+        "ref/netstandard1.3/zh-hans/System.Net.Http.xml",
+        "ref/netstandard1.3/zh-hant/System.Net.Http.xml",
         "ref/portable-net45+win8+wpa81/_._",
         "ref/win8/_._",
         "ref/wpa81/_._",
@@ -8894,7 +8934,7 @@
         "runtimes/win/lib/net46/System.Net.Http.dll",
         "runtimes/win/lib/netcore50/System.Net.Http.dll",
         "runtimes/win/lib/netstandard1.3/System.Net.Http.dll",
-        "system.net.http.4.3.4.nupkg.sha512",
+        "system.net.http.4.3.0.nupkg.sha512",
         "system.net.http.nuspec"
       ]
     },
@@ -10520,29 +10560,28 @@
         "system.security.cryptography.x509certificates.nuspec"
       ]
     },
-    "System.Security.Cryptography.Xml/6.0.1": {
-      "sha512": "5e5bI28T0x73AwTsbuFP4qSRzthmU2C0Gqgg3AZ3KTxmSyA+Uhk31puA3srdaeWaacVnHhLdJywCzqOiEpbO/w==",
+    "System.Security.Cryptography.Xml/5.0.0": {
+      "sha512": "MYmkHtCW+paFmPGFDktnLdOeH3zUrNchbZNki87E1ejNSMm9enSRbJokmvFrsWUrDE4bRE1lVeAle01+t6SGhA==",
       "type": "package",
-      "path": "system.security.cryptography.xml/6.0.1",
+      "path": "system.security.cryptography.xml/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Xml.targets",
-        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Security.Cryptography.Xml.dll",
         "lib/net461/System.Security.Cryptography.Xml.xml",
-        "lib/net6.0/System.Security.Cryptography.Xml.dll",
-        "lib/net6.0/System.Security.Cryptography.Xml.xml",
         "lib/netstandard2.0/System.Security.Cryptography.Xml.dll",
         "lib/netstandard2.0/System.Security.Cryptography.Xml.xml",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Xml.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Xml.xml",
-        "system.security.cryptography.xml.6.0.1.nupkg.sha512",
+        "ref/net461/System.Security.Cryptography.Xml.dll",
+        "ref/net461/System.Security.Cryptography.Xml.xml",
+        "ref/netstandard2.0/System.Security.Cryptography.Xml.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Xml.xml",
+        "system.security.cryptography.xml.5.0.0.nupkg.sha512",
         "system.security.cryptography.xml.nuspec",
-        "useSharedDesignerContext.txt"
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Security.Permissions/6.0.0": {
@@ -10887,13 +10926,12 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.RegularExpressions/4.3.1": {
-      "sha512": "N0kNRrWe4+nXOWlpLT4LAY5brb8caNFlUuIRpraCVMDLYutKkol1aV079rQjLuSxKMJT2SpBQsYX9xbcTMmzwg==",
+    "System.Text.RegularExpressions/4.3.0": {
+      "sha512": "RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
       "type": "package",
-      "path": "system.text.regularexpressions/4.3.1",
+      "path": "system.text.regularexpressions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -10967,7 +11005,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.text.regularexpressions.4.3.1.nupkg.sha512",
+        "system.text.regularexpressions.4.3.0.nupkg.sha512",
         "system.text.regularexpressions.nuspec"
       ]
     },
@@ -11531,118 +11569,95 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Umbraco.Cms.Core/10.6.1": {
-      "sha512": "ZOwHS3tM49QSzITKa0xHdGLB4butJOAKP1B2FfGM5IrhUMf0AswW0X79QZVXwt4grygBdM/Hwq0HU6m9yft+pw==",
+    "Umbraco.Cms.Core/10.0.0": {
+      "sha512": "KJ5BEiYNzc10gD8AeimnYKgXavB7kiT8I8Lcz0piqDUwj0DdJN6CQPibBuQ0MGkCmeIXeCPUEzumX72L/qxM6w==",
       "type": "package",
-      "path": "umbraco.cms.core/10.6.1",
+      "path": "umbraco.cms.core/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.Core.dll",
         "lib/net6.0/Umbraco.Core.xml",
-        "umbraco.cms.core.10.6.1.nupkg.sha512",
+        "umbraco.cms.core.10.0.0.nupkg.sha512",
         "umbraco.cms.core.nuspec"
       ]
     },
-    "Umbraco.Cms.Examine.Lucene/10.6.1": {
-      "sha512": "YmaKdXx3e6dEgKcm1/ycCURX6RuQ3t+gKMrIJ+STCO+ca06DJr5oXdJHxjEdFXQ2s0ocCbZRgF9y3Vp7bxxwYw==",
+    "Umbraco.Cms.Examine.Lucene/10.0.0": {
+      "sha512": "v6AOYW0XyPiOvu0d4Ydzqxf46IRZrE6/e/kssrrXDHPKflT/la1YvRe7Cat/p/Ohi9ZjKXvKTpxyeB+qAhw+0Q==",
       "type": "package",
-      "path": "umbraco.cms.examine.lucene/10.6.1",
+      "path": "umbraco.cms.examine.lucene/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.Examine.Lucene.dll",
         "lib/net6.0/Umbraco.Examine.Lucene.xml",
-        "umbraco.cms.examine.lucene.10.6.1.nupkg.sha512",
+        "umbraco.cms.examine.lucene.10.0.0.nupkg.sha512",
         "umbraco.cms.examine.lucene.nuspec"
       ]
     },
-    "Umbraco.Cms.Infrastructure/10.6.1": {
-      "sha512": "kN5Tfo6QGCnzUZUtMIbkdritM46J+qjhS5mkSLwktU8Qk+oDWl6dX+X9Drcd8dWEG7fd8zkbv29ymR44sM0y4A==",
+    "Umbraco.Cms.Infrastructure/10.0.0": {
+      "sha512": "SLWtTs9rQWUeA7zOt+zoZgLFkpEDXm+Cyr1rE7IMmX+6TsGiG4wIkVoZlvcY3e230wsGvG+AuIvzVPPz7kTMQA==",
       "type": "package",
-      "path": "umbraco.cms.infrastructure/10.6.1",
+      "path": "umbraco.cms.infrastructure/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.Infrastructure.dll",
         "lib/net6.0/Umbraco.Infrastructure.xml",
-        "umbraco.cms.infrastructure.10.6.1.nupkg.sha512",
+        "umbraco.cms.infrastructure.10.0.0.nupkg.sha512",
         "umbraco.cms.infrastructure.nuspec"
       ]
     },
-    "Umbraco.Cms.PublishedCache.NuCache/10.6.1": {
-      "sha512": "XWgQiunJmGCOW6pEhDM6rri2LYbA6aaPzOxhdalu3Capav3NcJrhxjiFuiwSvsPlJR8Ctf/dGRPAV22w3Wf3lA==",
+    "Umbraco.Cms.PublishedCache.NuCache/10.0.0": {
+      "sha512": "STeqbhTumhL7YKDNE2LECXCohUrsXopVrNloyHnAySq6sNwJJV9aC1AbjiiUrWNNEV8CBOiFddFCGYMr99di+w==",
       "type": "package",
-      "path": "umbraco.cms.publishedcache.nucache/10.6.1",
+      "path": "umbraco.cms.publishedcache.nucache/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.PublishedCache.NuCache.dll",
         "lib/net6.0/Umbraco.PublishedCache.NuCache.xml",
-        "umbraco.cms.publishedcache.nucache.10.6.1.nupkg.sha512",
+        "umbraco.cms.publishedcache.nucache.10.0.0.nupkg.sha512",
         "umbraco.cms.publishedcache.nucache.nuspec"
       ]
     },
-    "Umbraco.Cms.Web.BackOffice/10.6.1": {
-      "sha512": "lIZKWJvd58mYN4enhKHFFL/Xaf1WyAjuyHLKCpRejlTpZQ6ZlYzCYoFKxFRXQdOQgcNjMBSrxQ1ymjAdMK+0Mw==",
+    "Umbraco.Cms.Web.BackOffice/10.0.0": {
+      "sha512": "OwAgBm/0QhHWTjdfnlO5X7a0n99FVsNSs0G0kQcFL0vX7UaniS6ii2FofizMPyK/LMqfY2phGtt8TzzYh13Uiw==",
       "type": "package",
-      "path": "umbraco.cms.web.backoffice/10.6.1",
+      "path": "umbraco.cms.web.backoffice/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.Web.BackOffice.dll",
         "lib/net6.0/Umbraco.Web.BackOffice.xml",
-        "umbraco.cms.web.backoffice.10.6.1.nupkg.sha512",
+        "umbraco.cms.web.backoffice.10.0.0.nupkg.sha512",
         "umbraco.cms.web.backoffice.nuspec"
       ]
     },
-    "Umbraco.Cms.Web.Common/10.6.1": {
-      "sha512": "eleAeMrfX8ELukdxPx5WgipqolW93Vc3bMBdD5eZDMp5zubeDg6gDcKhV82S4HWj8qRmMUMvXBLfmfd6qsz/CA==",
+    "Umbraco.Cms.Web.Common/10.0.0": {
+      "sha512": "4TlAMlFA+Nefr+57cG59lTDnK+7M1r+sHoRybj7A5k1ewzzghG0TnsW8StI5/nxnwuqis5h91G957ho27NLXFw==",
       "type": "package",
-      "path": "umbraco.cms.web.common/10.6.1",
+      "path": "umbraco.cms.web.common/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.Web.Common.dll",
         "lib/net6.0/Umbraco.Web.Common.xml",
-        "umbraco.cms.web.common.10.6.1.nupkg.sha512",
+        "umbraco.cms.web.common.10.0.0.nupkg.sha512",
         "umbraco.cms.web.common.nuspec"
       ]
     },
-    "Umbraco.Cms.Web.Website/10.6.1": {
-      "sha512": "hue1iUdtSrgS8C+zEfUQZmuUbXR3jDbMzIUbtxCUQiFqDzYmOszrUrAIDPsSGnhJxRrVxgpQ3SVzZLzvljp4Ww==",
+    "Umbraco.Cms.Web.Website/10.0.0": {
+      "sha512": "f2x3OXEsitYGGJ53I52FiyaUgyeGJ4wy18e6Jr2GQylKonqSKl+bWGu0PJ/3f5VEwYY4gT0sO/9WEj9zs21Ozg==",
       "type": "package",
-      "path": "umbraco.cms.web.website/10.6.1",
+      "path": "umbraco.cms.web.website/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "icon.png",
         "lib/net6.0/Umbraco.Web.Website.dll",
         "lib/net6.0/Umbraco.Web.Website.xml",
-        "umbraco.cms.web.website.10.6.1.nupkg.sha512",
+        "umbraco.cms.web.website.10.0.0.nupkg.sha512",
         "umbraco.cms.web.website.nuspec"
-      ]
-    },
-    "Umbraco.CSharpTest.Net.Collections/14.906.1403.1085": {
-      "sha512": "TgBX1VO1wF/MW56KXGI38QVjlFyLUXru8WbJOBbFecqr/h0kJQBBQnFidty7db4ZtPQgYUfu5twGOge/107teQ==",
-      "type": "package",
-      "path": "umbraco.csharptest.net.collections/14.906.1403.1085",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/README.htm",
-        "contentFiles/any/net6.0/README.htm",
-        "contentFiles/any/net7.0/README.htm",
-        "lib/net6.0/CSharpTest.Net.Collections.dll",
-        "lib/net7.0/CSharpTest.Net.Collections.dll",
-        "umbraco.csharptest.net.collections.14.906.1403.1085.nupkg.sha512",
-        "umbraco.csharptest.net.collections.nuspec"
       ]
     },
     "Webwonders.Umbraco.Extensions/10.5.2": {
@@ -11663,8 +11678,8 @@
     "net6.0": [
       "Haukcode.WkHtmlToPdfDotNet >= 1.5.86",
       "RazorLight >= 2.3.1",
-      "Umbraco.Cms.Web.BackOffice >= 10.6.1",
-      "Umbraco.Cms.Web.Website >= 10.6.1",
+      "Umbraco.Cms.Web.BackOffice >= 10.0.0 < 11.0.0",
+      "Umbraco.Cms.Web.Website >= 10.0.0 < 11.0.0",
       "Webwonders.Umbraco.Extensions >= 10.5.2"
     ]
   },
@@ -11723,11 +11738,11 @@
           },
           "Umbraco.Cms.Web.BackOffice": {
             "target": "Package",
-            "version": "[10.6.1, )"
+            "version": "[10.0.0, 11.0.0)"
           },
           "Umbraco.Cms.Web.Website": {
             "target": "Package",
-            "version": "[10.6.1, )"
+            "version": "[10.0.0, 11.0.0)"
           },
           "Webwonders.Umbraco.Extensions": {
             "target": "Package",
