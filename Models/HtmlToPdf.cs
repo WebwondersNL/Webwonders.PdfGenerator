@@ -157,10 +157,10 @@ public enum Unit {
 
 public class MarginSettings { 
     public Unit Unit { get;set; } = Unit.Millimeters;
-    public double Top { get;set; } = 0;
-    public double Bottom { get;set; } = 0;
-    public double Left { get;set; } = 0;
-    public double Right { get;set; } = 0;
+    public double Top { get;set; } = 10;
+    public double Bottom { get;set; } = 10;
+    public double Left { get;set; } = 10;
+    public double Right { get;set; } = 10;
 
 }
 
