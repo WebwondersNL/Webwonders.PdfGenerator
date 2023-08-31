@@ -2,12 +2,16 @@
 
 
 ## About
-
-Webwonders.PdfGenerator is a wrapper around Haukcode.WkHtmlToPdfDotNet to generate PDF's from HTML-files to be used within Umbraco.
+Generate PDF's from HTML-files in Umbraco.
+Webwonders.PdfGenerator is a wrapper around Haukcode.WkHtmlToPdfDotNet.
 
 
 ## How to use
-
+Pdf's are generated from HTML-files in the folder /Views/Pdf/{PdfType} where PdfType is the name of the type of PDF you want to generate.
+In this folder three views can be located: Header.cshtml, Body.cshtml and Footer.cshtml.
+The Body view is the main view and is required, the Header and Footer views are optional.
+All views are rendered with the viewmodel you pass to PdfGenerator.
+The result is a named tuple, indicating success and the MemoryStream containing the PDF.
 
 
 
@@ -15,29 +19,32 @@ Webwonders.PdfGenerator is a wrapper around Haukcode.WkHtmlToPdfDotNet to genera
 
 ```csharp
 
- var pdfViewModel = new PdfViewModel
- {
-     OrderId = orderId,
-     InvoiceNumber = invoiceNumber,
-     InvoiceDate = invoiceDate
- };
+// create viewmodel
+var pdfViewModel = new PdfViewModel
+{
+    OrderId = orderId,
+    InvoiceNumber = invoiceNumber,
+    InvoiceDate = invoiceDate
+};
 
-  var pdfSettings = new WWHtmlToPdfSettings()
- {
-     Margins = new MarginSettings { Top = 50, Bottom = 65 },
-     DocumentTitle = fileName,
-     PagesCount = true,
-     DefaultEncoding = "utf-8",
-     UserStyleSheet = Path.Combine(webRootPath, "pdf", "pdfStyle.css"),
-     HeaderSpacing = 20,
-     FooterSpacing = 30,
- };
+// define settings
+var pdfSettings = new WWHtmlToPdfSettings()
+{
+    Margins = new MarginSettings { Top = 50, Bottom = 65 },
+    DocumentTitle = fileName,
+    PagesCount = true,
+    DefaultEncoding = "utf-8",
+    UserStyleSheet = Path.Combine(webRootPath, "pdf", "pdfStyle.css"),
+    HeaderSpacing = 20,
+    FooterSpacing = 30,
+};
 
- (bool success, MemoryStream? stream) = _wwHtmlToPdfService.GetPdfMemoryStream("Invoice", pdfViewModel, pdfSettings);
+// get memory stream of PDF
+(bool success, MemoryStream? stream) = _wwHtmlToPdfService.GetPdfMemoryStream("Invoice", pdfViewModel, pdfSettings);
 
- if (success && stream != null)
- {
-     // Do something with the stream
- }
+if (success && stream != null)
+{
+    // Do something with the stream
+}
 
 ```
