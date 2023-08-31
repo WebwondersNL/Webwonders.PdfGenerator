@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Webwonders.PdfGenerator</Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Webwonders</Authors>
+    <Description>Wrapper around Haukcode.WkHtmlToPdfDotNet to generate PDF's from HTML for use in Umbraco</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.86" />
+    <PackageReference Include="RazorLight" Version="2.3.1" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.6.1" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.6.1" />
+    <PackageReference Include="Webwonders.Umbraco.Extensions" Version="10.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

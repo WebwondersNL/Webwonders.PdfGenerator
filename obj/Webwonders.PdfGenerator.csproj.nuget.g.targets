@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.mvc.razor.runtimecompilation\6.0.5\buildTransitive\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.mvc.razor.runtimecompilation\6.0.5\buildTransitive\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets')" />
+    <Import Project="$(NuGetPackageRoot)haukcode.wkhtmltopdfdotnet\1.5.86\build\Haukcode.WkHtmlToPdfDotNet.targets" Condition="Exists('$(NuGetPackageRoot)haukcode.wkhtmltopdfdotnet\1.5.86\build\Haukcode.WkHtmlToPdfDotNet.targets')" />
+    <Import Project="$(NuGetPackageRoot)webwonders.umbraco.extensions\10.5.2\buildTransitive\Webwonders.Umbraco.Extensions.targets" Condition="Exists('$(NuGetPackageRoot)webwonders.umbraco.extensions\10.5.2\buildTransitive\Webwonders.Umbraco.Extensions.targets')" />
+  </ImportGroup>
+</Project>

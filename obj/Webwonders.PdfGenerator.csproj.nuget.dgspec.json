@@ -1,0 +1,90 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\frans\\Source\\Repos\\Webwonders.PdfGenerator\\Webwonders.PdfGenerator.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\frans\\Source\\Repos\\Webwonders.PdfGenerator\\Webwonders.PdfGenerator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\frans\\Source\\Repos\\Webwonders.PdfGenerator\\Webwonders.PdfGenerator.csproj",
+        "projectName": "Webwonders.PdfGenerator",
+        "projectPath": "C:\\Users\\frans\\Source\\Repos\\Webwonders.PdfGenerator\\Webwonders.PdfGenerator.csproj",
+        "packagesPath": "C:\\Users\\frans\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frans\\Source\\Repos\\Webwonders.PdfGenerator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\frans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\frans\\Source\\Local Nuget Packages": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.outfield.digital/unstable/vendr/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Haukcode.WkHtmlToPdfDotNet": {
+              "target": "Package",
+              "version": "[1.5.86, )"
+            },
+            "RazorLight": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Umbraco.Cms.Web.BackOffice": {
+              "target": "Package",
+              "version": "[10.6.1, )"
+            },
+            "Umbraco.Cms.Web.Website": {
+              "target": "Package",
+              "version": "[10.6.1, )"
+            },
+            "Webwonders.Umbraco.Extensions": {
+              "target": "Package",
+              "version": "[10.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
