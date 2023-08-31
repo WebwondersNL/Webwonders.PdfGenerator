@@ -27,7 +27,7 @@ var pdfViewModel = new PdfViewModel
     InvoiceDate = invoiceDate
 };
 
-// define settings
+// define settings, optional: all settings have defaults
 var pdfSettings = new WWHtmlToPdfSettings()
 {
     Margins = new MarginSettings { Top = 50, Bottom = 65 },
@@ -40,7 +40,7 @@ var pdfSettings = new WWHtmlToPdfSettings()
 };
 
 // get memory stream of PDF
-(bool success, MemoryStream? stream) = _wwHtmlToPdfService.GetPdfMemoryStream("Invoice", pdfViewModel, pdfSettings);
+(bool success, MemoryStream? stream) = GetPdfMemoryStream("Invoice", pdfViewModel, pdfSettings);
 
 if (success && stream != null)
 {
