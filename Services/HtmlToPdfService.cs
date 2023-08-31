@@ -1,28 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WkHtmlToPdfDotNet.Contracts;
-using WkHtmlToPdfDotNet;
 using System.IO;
-using Umbraco.Cms.Core.Web;
 using Microsoft.AspNetCore.Hosting;
-using Umbraco.Extensions;
 using RazorLight;
+using Umbraco.Cms.Core.Web;
+using Umbraco.Extensions;
 using Webwonders.Extensions;
+using WkHtmlToPdfDotNet;
+using WkHtmlToPdfDotNet.Contracts;
 
 namespace Webwonders.PdfGenerator;
 
-public interface IWWHtmlToPdfService
+public interface IHtmlToPdfService
 {
-    (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, WWHtmlToPdfSettings? settings = null);
+    (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null);
 
 }
 
 
 
-public class WWHtmlToPdfService : IWWHtmlToPdfService
+public class HtmlToPdfService : IHtmlToPdfService
 {
 
     private readonly IWebHostEnvironment _webHostEnvironment;
@@ -37,10 +33,10 @@ public class WWHtmlToPdfService : IWWHtmlToPdfService
 
 
 
-    public WWHtmlToPdfService(IWebHostEnvironment webHostEnvironment,
-                              IConverter converter,
-                              IUmbracoContextAccessor umbracoContextAccessor,
-                              IWWCacheService cacheService)
+    public HtmlToPdfService(IWebHostEnvironment webHostEnvironment,
+                            IConverter converter,
+                            IUmbracoContextAccessor umbracoContextAccessor,
+                            IWWCacheService cacheService)
     {
         _webHostEnvironment = webHostEnvironment;
         _converter = converter;
@@ -67,7 +63,7 @@ public class WWHtmlToPdfService : IWWHtmlToPdfService
     /// <param name="settings">Settings of pdf</param>
     /// <returns>bool success </returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, WWHtmlToPdfSettings? settings = null)
+    public (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null)
     {
 
         if (String.IsNullOrWhiteSpace(pdfType))
@@ -81,7 +77,7 @@ public class WWHtmlToPdfService : IWWHtmlToPdfService
 
 
         // when settings is null: use all defaultvalues
-        settings ??= new WWHtmlToPdfSettings();
+        settings ??= new HtmlToPdfSettings();
 
 
         // check for existance of views
@@ -107,12 +103,12 @@ public class WWHtmlToPdfService : IWWHtmlToPdfService
 
             if (settings.UseHeaderHtml && String.IsNullOrWhiteSpace(settings.HeaderHtmlUrl))
             {
-                settings.HeaderHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/WWHtmlToPdfSurface/GetHeaderHtml?type={pdfType}";
+                settings.HeaderHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/HtmlToPdfSurface/GetHeaderHtml?type={pdfType}";
             }
 
             if (settings.UseFooterHtml && String.IsNullOrWhiteSpace(settings.FooterHtmlUrl))
             {
-                settings.FooterHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/WWHtmlToPdfSurface/GetFooterHtml?type={pdfType}";
+                settings.FooterHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/HtmlToPdfSurface/GetFooterHtml?type={pdfType}";
             }
         }
 
@@ -176,7 +172,7 @@ public class WWHtmlToPdfService : IWWHtmlToPdfService
     /// <param name="html"></param>
     /// <param name="settings"></param>
     /// <returns></returns>
-    private static IDocument CreatePdfDocument(string html, WWHtmlToPdfSettings settings)
+    private static IDocument CreatePdfDocument(string html, HtmlToPdfSettings settings)
     {
         return new HtmlToPdfDocument
         {

@@ -13,18 +13,18 @@ using Webwonders.Extensions;
 namespace Webwonders.PdfGenerator;
 
 [PluginController("WebwondersPdfGenerator")]
-public class WWHtmlToPdfSurfaceController : SurfaceController
+public class HtmlToPdfSurfaceController : SurfaceController
 {
     private readonly IWWCacheService _wwCacheService;
 
-    public WWHtmlToPdfSurfaceController(IWWCacheService wwCacheService,
-                                        IUmbracoContextAccessor umbracoContextAccessor,
-                                        IUmbracoDatabaseFactory databaseFactory,
-                                        ServiceContext services,
-                                        AppCaches appCaches,
-                                        IProfilingLogger profilingLogger,
-                                        IPublishedUrlProvider publishedUrlProvider) : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger,
-                                                                                     publishedUrlProvider)
+    public HtmlToPdfSurfaceController(IWWCacheService wwCacheService,
+                                      IUmbracoContextAccessor umbracoContextAccessor,
+                                      IUmbracoDatabaseFactory databaseFactory,
+                                      ServiceContext services,
+                                      AppCaches appCaches,
+                                      IProfilingLogger profilingLogger,
+                                      IPublishedUrlProvider publishedUrlProvider) : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger,
+                                                                                         publishedUrlProvider)
     {
         _wwCacheService = wwCacheService;
     }

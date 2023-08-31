@@ -3,7 +3,7 @@
 
 ## About
 Generate PDF's from HTML-files in Umbraco.
-Webwonders.PdfGenerator is a wrapper around Haukcode.WkHtmlToPdfDotNet.
+Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet (https://github.com/HakanL/WkHtmlToPdf-DotNet)
 
 
 ## How to use
@@ -13,6 +13,8 @@ The Body view is the main view and is required, the Header and Footer views are 
 All views are rendered with the viewmodel you pass to PdfGenerator.
 The result is a named tuple, indicating success and the MemoryStream containing the PDF.
 
+The settings are taken from WkHtmlToPdfDotNet, but are all combined in one class: HtmlToPdfSettings.
+All settings are optional, and have default values. 
 
 
 ### example
@@ -28,7 +30,7 @@ var pdfViewModel = new PdfViewModel
 };
 
 // define settings, optional: all settings have defaults
-var pdfSettings = new WWHtmlToPdfSettings()
+var pdfSettings = new HtmlToPdfSettings()
 {
     Margins = new MarginSettings { Top = 50, Bottom = 65 },
     DocumentTitle = fileName,
@@ -40,7 +42,7 @@ var pdfSettings = new WWHtmlToPdfSettings()
 };
 
 // get memory stream of PDF
-(bool success, MemoryStream? stream) = GetPdfMemoryStream("Invoice", pdfViewModel, pdfSettings);
+(bool success, MemoryStream? stream) = htmlToPdfService.GetPdfMemoryStream("Invoice", pdfViewModel, pdfSettings);
 
 if (success && stream != null)
 {
@@ -48,3 +50,6 @@ if (success && stream != null)
 }
 
 ```
+
+## Reccomandation
+Do not use wkhtmltopdf with any untrusted HTML – be sure to sanitize any user-supplied HTML/JS, otherwise it can lead to complete takeover of the server it is running on.

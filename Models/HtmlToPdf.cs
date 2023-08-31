@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using WkHtmlToPdfDotNet;
 
 namespace Webwonders.PdfGenerator;
@@ -151,7 +149,7 @@ public enum PaperKind
 }
 
 
-public class WWHtmlToPdfSettings
+public class HtmlToPdfSettings
 {
     /// <summary>
     /// Use a header for the Pdf? Default= true

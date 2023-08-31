@@ -1,0 +1,49 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AddOnPackagesRequiredForUmbracoCloud": [],
+  "AlternateCategory": "",
+  "AuthorDetails": {
+    "Name": "Webwonders",
+    "Description": "",
+    "Url": "",
+    "ImageUrl": "",
+    "Contributors": [
+      {
+        "Name": "",
+        "Url": ""
+      }
+    ],
+    "SyncContributorsFromRepository": "true|false"
+  },
+  "Category": "Developer Tools",
+  "Description": "Generate PDF's from HTML-files. Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet",
+  "DiscussionForumUrl": "",
+  "DocumentationUrl": "",
+  "LicenseTypes": [ "MIT" ],
+  "IssueTrackerUrl": "",
+  "IsSubPackageOf": "",
+  "PackageType": "Package",
+  "PackagesByAuthor": [],
+  "RelatedPackages": [
+    {
+      "GroupTitle": "",
+      "PackageId": "",
+      "Description": ""
+    }
+  ],
+  "Screenshots": [
+    {
+      "ImageUrl": "",
+      "Caption": ""
+    }
+  ],
+  "Tags": ["PDF"],
+  "Title": "Webwonders.PdfGenerator",
+  "VersionSpecificPackageIds": [
+    {
+      "UmbracoMajorVersion": 8,
+      "PackageId": ""
+    }
+  ],
+  "VideoUrl": ""
+}
