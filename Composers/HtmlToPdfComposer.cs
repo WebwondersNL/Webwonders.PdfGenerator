@@ -9,12 +9,12 @@ namespace Webwonders.PdfGenerator;
 
 // Adds htmltopdf service to the container
 
-public class HtmlToPdfComposer : IComposer
+public class WebwondersHtmlToPdfComposer : IComposer
 {
     public void Compose(IUmbracoBuilder builder)
     {
         builder.Services
             .AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()))
-            .AddScoped<IHtmlToPdfService, HtmlToPdfService>();
+            .AddScoped<IWebwondersHtmlToPdfService, WebwondersHtmlToPdfService>();
     }
 }
