@@ -7,18 +7,21 @@ Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet (https://github.co
 
 
 ## How to use
-Pdf's are generated from HTML-files in the folder /Views/Pdf/{PdfType} where PdfType is the name of the type of PDF you want to generate.
+The package defines a service: IHtmlToPdfService, which can be injected in your code.
+This service has one method: GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null).
+
+PdfType is the name of the type of PDF you want to generate, this should also be the name of the folder in /Views/Pdf/ where you locate the views for the PDF.
 In this folder three views can be located: Header.cshtml, Body.cshtml and Footer.cshtml.
 The Body view is the main view and is required, the Header and Footer views are optional.
-All views are rendered with the viewmodel you pass to PdfGenerator.
-The result is a named tuple, indicating success and the MemoryStream containing the PDF.
 
-The settings are taken from WkHtmlToPdfDotNet, but are all combined in one class: HtmlToPdfSettings.
-All settings are optional, and have default values. 
+ViewModel is the viewmodel you want to pass to the views: all views are rendered with the viewmodel you pass.
+
+Settings are taken from WkHtmlToPdfDotNet, but are all combined in one class: HtmlToPdfSettings, they all are optional and have default values.
+
+The result of GetpdfMemoryStream is a named tuple: (bool success, MemoryStream? stream), indicating success and the MemoryStream containing the PDF.
 
 
 ### example
-
 ```csharp
 
 // create viewmodel
@@ -50,6 +53,7 @@ if (success && stream != null)
 }
 
 ```
+
 
 ## Reccomandation
 Do not use wkhtmltopdf with any untrusted HTML – be sure to sanitize any user-supplied HTML/JS, otherwise it can lead to complete takeover of the server it is running on.
