@@ -17,4 +17,5 @@ public class HtmlToPdfComposer : IComposer
             .AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()))
             .AddScoped<IWebwondersHtmlToPdfService, WebwondersHtmlToPdfService>();
     }
+
 }
