@@ -11678,8 +11678,8 @@
     "net6.0": [
       "Haukcode.WkHtmlToPdfDotNet >= 1.5.86",
       "RazorLight >= 2.3.1",
-      "Umbraco.Cms.Web.BackOffice >= 10.0.0 < 11.0.0",
-      "Umbraco.Cms.Web.Website >= 10.0.0 < 11.0.0",
+      "Umbraco.Cms.Web.BackOffice >= 10.0.0 <= 12.0.0",
+      "Umbraco.Cms.Web.Website >= 10.0.0 <= 12.0.0",
       "Webwonders.Umbraco.Extensions >= 10.5.2"
     ]
   },
@@ -11738,11 +11738,11 @@
           },
           "Umbraco.Cms.Web.BackOffice": {
             "target": "Package",
-            "version": "[10.0.0, 11.0.0)"
+            "version": "[10.0.0, 12.0.0]"
           },
           "Umbraco.Cms.Web.Website": {
             "target": "Package",
-            "version": "[10.0.0, 11.0.0)"
+            "version": "[10.0.0, 12.0.0]"
           },
           "Webwonders.Umbraco.Extensions": {
             "target": "Package",

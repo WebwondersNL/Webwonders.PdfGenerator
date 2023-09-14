@@ -169,14 +169,14 @@ public class MarginSettings {
 public class HtmlToPdfSettings
 {
     /// <summary>
-    /// Use a header for the Pdf? Default= true
+    /// Use a header for the Pdf? Default= false
     /// </summary>
-    public bool UseHeaderHtml { get; set; } = true;
+    public bool UseHeaderHtml { get; set; } = false;
 
     /// <summary>
-    /// Use a footer for the Pdf? Default= true
+    /// Use a footer for the Pdf? Default= false
     /// </summary>
-    public bool UseFooterHtml { get; set; } = true;
+    public bool UseFooterHtml { get; set; } = false;
 
     /// <summary>
     /// The orientation of the output document, must be either "Landscape" or "Portrait". Default = "portrait"
