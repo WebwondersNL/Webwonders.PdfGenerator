@@ -10,6 +10,7 @@
     <Description>Wrapper around Haukcode.WkHtmlToPdfDotNet to generate PDF's from HTML for use in Umbraco</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>WebwondersPDF.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Images\WebwondersPDF.png" Pack="true" PackagePath="\" />
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

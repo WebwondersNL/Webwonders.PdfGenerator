@@ -7,6 +7,7 @@
     <authors>Webwonders</authors>
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>WebwondersPDF.png</icon>
     <readme>README.md</readme>
     <description>Wrapper around Haukcode.WkHtmlToPdfDotNet to generate PDF's from HTML for use in Umbraco</description>
     <dependencies>
@@ -22,5 +23,6 @@
   <files>
     <file src="C:\Users\frans\Source\Repos\Webwonders.PdfGenerator\bin\Release\net6.0\Webwonders.PdfGenerator.dll" target="lib\net6.0\Webwonders.PdfGenerator.dll" />
     <file src="C:\Users\frans\Source\Repos\Webwonders.PdfGenerator\README.md" target="\README.md" />
+    <file src="C:\Users\frans\Source\Repos\Webwonders.PdfGenerator\Images\WebwondersPDF.png" target="\WebwondersPDF.png" />
   </files>
 </package>
