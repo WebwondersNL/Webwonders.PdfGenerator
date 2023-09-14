@@ -4,23 +4,23 @@
   "AlternateCategory": "",
   "AuthorDetails": {
     "Name": "Webwonders",
-    "Description": "",
-    "Url": "",
-    "ImageUrl": "",
+    "Description": "Webwonders is a digital agency and Umbraco Gold Partner based in Eindhoven, the Netherlands.",
+    "Url": "https://www.webwonders.nl/",
+    "ImageUrl": "https://www.webwonders.nl/Images/logo/WordmarkWW-orange.png",
     "Contributors": [
       {
         "Name": "",
         "Url": ""
       }
     ],
-    "SyncContributorsFromRepository": "true|false"
+    "SyncContributorsFromRepository": "true"
   },
   "Category": "Developer Tools",
-  "Description": "Generate PDF's from HTML-files. Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet",
-  "DiscussionForumUrl": "",
-  "DocumentationUrl": "",
+  "Description": "Generate PDF's from HTML-files on Umbraco Cloud. Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet",
+  "DiscussionForumUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator/issues",
+  "DocumentationUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator#readme",
   "LicenseTypes": [ "MIT" ],
-  "IssueTrackerUrl": "",
+  "IssueTrackerUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator/issues",
   "IsSubPackageOf": "",
   "PackageType": "Package",
   "PackagesByAuthor": [],
@@ -37,13 +37,7 @@
       "Caption": ""
     }
   ],
-  "Tags": ["PDF"],
+  "Tags": [ "PDF" ],
   "Title": "Webwonders.PdfGenerator",
-  "VersionSpecificPackageIds": [
-    {
-      "UmbracoMajorVersion": 8,
-      "PackageId": ""
-    }
-  ],
   "VideoUrl": ""
 }
