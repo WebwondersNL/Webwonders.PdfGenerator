@@ -10,7 +10,7 @@ using WkHtmlToPdfDotNet.Contracts;
 
 namespace Webwonders.PdfGenerator;
 
-public interface IWebwondersHtmlToPdfService
+public interface IHtmlToPdfService
 {
     (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null);
 
@@ -18,7 +18,7 @@ public interface IWebwondersHtmlToPdfService
 
 
 
-public class WebwondersHtmlToPdfService : IWebwondersHtmlToPdfService
+public class HtmlToPdfService : IHtmlToPdfService
 {
 
     private readonly IWebHostEnvironment _webHostEnvironment;
@@ -33,7 +33,7 @@ public class WebwondersHtmlToPdfService : IWebwondersHtmlToPdfService
 
 
 
-    public WebwondersHtmlToPdfService(IWebHostEnvironment webHostEnvironment,
+    public HtmlToPdfService(IWebHostEnvironment webHostEnvironment,
                             IConverter converter,
                             IUmbracoContextAccessor umbracoContextAccessor,
                             IWWCacheService cacheService)

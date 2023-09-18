@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cloweHiCoV0IuRqyzywl6eGg8j99/nvk2xO+MxMaKKwoV55fVzYCFl4j9nV9nJ0wArs7s2um/k3/bjEfTfsj/A==",
+  "dgSpecHash": "59V+1Pl8J9YvsLUQfixqkomQZrkXiE9ASN/dHmoIb7+l4aXmPK6iUTHIVckPqxaDcimSGEWRMqBWXLAtLJkUzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\frans\\Source\\Repos\\Webwonders.PdfGenerator\\Webwonders.PdfGenerator.csproj",
   "expectedPackageFiles": [
@@ -236,7 +236,7 @@
     "C:\\Users\\frans\\.nuget\\packages\\umbraco.cms.web.backoffice\\10.0.0\\umbraco.cms.web.backoffice.10.0.0.nupkg.sha512",
     "C:\\Users\\frans\\.nuget\\packages\\umbraco.cms.web.common\\10.0.0\\umbraco.cms.web.common.10.0.0.nupkg.sha512",
     "C:\\Users\\frans\\.nuget\\packages\\umbraco.cms.web.website\\10.0.0\\umbraco.cms.web.website.10.0.0.nupkg.sha512",
-    "C:\\Users\\frans\\.nuget\\packages\\webwonders.umbraco.extensions\\10.5.2\\webwonders.umbraco.extensions.10.5.2.nupkg.sha512"
+    "C:\\Users\\frans\\.nuget\\packages\\webwonders.umbraco.extensions\\12.0.0\\webwonders.umbraco.extensions.12.0.0.nupkg.sha512"
   ],
   "logs": []
 }

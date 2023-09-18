@@ -11,14 +11,15 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>WebwondersPDF.png</PackageIcon>
+    <PackageTags>umbraco-marketplace;umbraco;umbraco cloud;pdf generator;pdf;wkhtmltopdfdotnet</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.86" />
     <PackageReference Include="RazorLight" Version="2.3.1" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[10.0.0,12]" />
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[10.0.0,12]" />
-    <PackageReference Include="Webwonders.Umbraco.Extensions" Version="10.5.2" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="[10,12]" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="[10,12]" />
+    <PackageReference Include="Webwonders.Umbraco.Extensions" Version="[12,13)" />
   </ItemGroup>
 
   <ItemGroup>
