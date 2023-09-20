@@ -17,7 +17,7 @@
         <dependency id="RazorLight" version="2.3.1" exclude="Build,Analyzers" />
         <dependency id="Umbraco.Cms.Web.BackOffice" version="[10.0.0, 12.0.0]" exclude="Build,Analyzers" />
         <dependency id="Umbraco.Cms.Web.Website" version="[10.0.0, 12.0.0]" exclude="Build,Analyzers" />
-        <dependency id="Webwonders.Umbraco.Extensions" version="[12.0.0, 13.0.0)" exclude="Build,Analyzers" />
+        <dependency id="Webwonders.Umbraco.Extensions" version="12.0.1" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>

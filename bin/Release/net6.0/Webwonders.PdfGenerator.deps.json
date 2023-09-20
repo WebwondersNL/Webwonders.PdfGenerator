@@ -38,7 +38,7 @@
           "RazorLight": "2.3.1",
           "Umbraco.Cms.Web.BackOffice": "10.0.0",
           "Umbraco.Cms.Web.Website": "10.0.0",
-          "Webwonders.Umbraco.Extensions": "12.0.0",
+          "Webwonders.Umbraco.Extensions": "12.0.1",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "6.0.0.0",
@@ -3051,7 +3051,7 @@
           "lib/net6.0/Umbraco.Web.Website.dll": {}
         }
       },
-      "Webwonders.Umbraco.Extensions/12.0.0": {
+      "Webwonders.Umbraco.Extensions/12.0.1": {
         "dependencies": {
           "NPOI": "2.5.6",
           "NPoco": "5.3.2",
@@ -3060,8 +3060,8 @@
         },
         "runtime": {
           "lib/net6.0/Webwonders.Umbraco.Extensions.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.0.0"
+            "assemblyVersion": "12.0.1.0",
+            "fileVersion": "12.0.1.0"
           }
         },
         "compile": {
@@ -6428,12 +6428,12 @@
       "path": "umbraco.cms.web.website/10.0.0",
       "hashPath": "umbraco.cms.web.website.10.0.0.nupkg.sha512"
     },
-    "Webwonders.Umbraco.Extensions/12.0.0": {
+    "Webwonders.Umbraco.Extensions/12.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WySogZbZCQ+2SGohJc5rsliJ6ttRUr5Dj0nqm6TeiTKqWi2F1Mo7aOZEbBnJ6Z9EhIbVyVtYO2XyHOrp5212/w==",
-      "path": "webwonders.umbraco.extensions/12.0.0",
-      "hashPath": "webwonders.umbraco.extensions.12.0.0.nupkg.sha512"
+      "sha512": "sha512-1Wq//1CI0OYHrk7A3ua3HWmJYE9RHownIKB1RexYkbiZeXLw4r3vKfhDT/wi4HtMoQ71rOQW+WjJ/c5c/9F4EA==",
+      "path": "webwonders.umbraco.extensions/12.0.1",
+      "hashPath": "webwonders.umbraco.extensions.12.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/6.0.0.0": {
       "type": "referenceassembly",

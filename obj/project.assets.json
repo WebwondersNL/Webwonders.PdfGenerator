@@ -4194,13 +4194,13 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Webwonders.Umbraco.Extensions/12.0.0": {
+      "Webwonders.Umbraco.Extensions/12.0.1": {
         "type": "package",
         "dependencies": {
           "NPOI": "2.5.6",
           "NPoco": "5.3.2",
-          "Umbraco.Cms.Web.BackOffice": "[10.0.0, 11.0.0)",
-          "Umbraco.Cms.Web.Website": "[10.0.0, 11.0.0)"
+          "Umbraco.Cms.Web.BackOffice": "[10.0.0, 12.0.0]",
+          "Umbraco.Cms.Web.Website": "[10.0.0, 12.0.0]"
         },
         "compile": {
           "lib/net6.0/Webwonders.Umbraco.Extensions.dll": {}
@@ -11658,16 +11658,16 @@
         "umbraco.cms.web.website.nuspec"
       ]
     },
-    "Webwonders.Umbraco.Extensions/12.0.0": {
-      "sha512": "WySogZbZCQ+2SGohJc5rsliJ6ttRUr5Dj0nqm6TeiTKqWi2F1Mo7aOZEbBnJ6Z9EhIbVyVtYO2XyHOrp5212/w==",
+    "Webwonders.Umbraco.Extensions/12.0.1": {
+      "sha512": "1Wq//1CI0OYHrk7A3ua3HWmJYE9RHownIKB1RexYkbiZeXLw4r3vKfhDT/wi4HtMoQ71rOQW+WjJ/c5c/9F4EA==",
       "type": "package",
-      "path": "webwonders.umbraco.extensions/12.0.0",
+      "path": "webwonders.umbraco.extensions/12.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "buildTransitive/Webwonders.Umbraco.Extensions.targets",
         "lib/net6.0/Webwonders.Umbraco.Extensions.dll",
-        "webwonders.umbraco.extensions.12.0.0.nupkg.sha512",
+        "webwonders.umbraco.extensions.12.0.1.nupkg.sha512",
         "webwonders.umbraco.extensions.nuspec"
       ]
     }
@@ -11678,7 +11678,7 @@
       "RazorLight >= 2.3.1",
       "Umbraco.Cms.Web.BackOffice >= 10.0.0 <= 12.0.0",
       "Umbraco.Cms.Web.Website >= 10.0.0 <= 12.0.0",
-      "Webwonders.Umbraco.Extensions >= 12.0.0 < 13.0.0"
+      "Webwonders.Umbraco.Extensions >= 12.0.1"
     ]
   },
   "packageFolders": {
@@ -11744,7 +11744,7 @@
           },
           "Webwonders.Umbraco.Extensions": {
             "target": "Package",
-            "version": "[12.0.0, 13.0.0)"
+            "version": "[12.0.1, )"
           }
         },
         "imports": [
