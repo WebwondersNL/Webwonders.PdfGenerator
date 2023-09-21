@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Webwonders.PdfGenerator</id>
-    <version>1.0.0</version>
+    <version>1.0.1.1</version>
     <title>Webwonders.PdfGenerator</title>
     <authors>Webwonders</authors>
     <license type="expression">MIT</license>

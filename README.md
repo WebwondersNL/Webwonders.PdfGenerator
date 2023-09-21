@@ -8,11 +8,15 @@ Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet (https://github.co
 
 ## How to use
 The package defines a service: IWebwondersHtmlToPdfService, which can be injected in your code.
-This service has one method: GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null).
+This service has one method: GetPdfMemoryStream(string pdfTheme, object viewModel, HtmlToPdfSettings? settings = null).
 
-PdfType is the name of the type of PDF you want to generate, this should also be the name of the folder in /Views/Pdf/ where you locate the views for the PDF.
-In this folder three views can be located: Header.cshtml, Body.cshtml and Footer.cshtml.
-The Body view is the main view and is required, the Header and Footer views are optional.
+PdfTheme is the name of the type of PDF you want to generate.
+This should also be the name of the folder where you locate the views for the PDF: /Views/Pdf/Pdftheme.
+In this folder three views can be located: Header.cshtml, Body.cshtml and Footer.cshtml. The Body is required, the Header and Footer views are optional.
+By specifying UseHeaderHtml and UseFooterHtml in the settings you can indicate if you want to use the Header and Footer views.
+
+There is an option to use a custom stylesheet for the PDF: pdfStyle.css.
+If a stylesheet with the name pdfStyle.css exists in the folder /wwwroot/PdfThemes/pdfTheme, this stylesheet is used to style the PDF.
 
 ViewModel is the viewmodel you want to pass to the views: all views are rendered with the viewmodel you pass.
 
@@ -39,7 +43,8 @@ var pdfSettings = new HtmlToPdfSettings()
     DocumentTitle = fileName,
     PagesCount = true,
     DefaultEncoding = "utf-8",
-    UserStyleSheet = Path.Combine(webRootPath, "pdf", "pdfStyle.css"),
+    UseHeaderHtml = true,
+    UseFooterHtml = true,
     HeaderSpacing = 20,
     FooterSpacing = 30,
 };

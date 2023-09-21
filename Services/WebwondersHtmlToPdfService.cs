@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
 using RazorLight;
 using Umbraco.Cms.Core.Web;
 using Umbraco.Extensions;
@@ -12,7 +13,7 @@ namespace Webwonders.PdfGenerator;
 
 public interface IHtmlToPdfService
 {
-    (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null);
+    (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfTheme, object viewModel, HtmlToPdfSettings? settings = null);
 
 }
 
@@ -25,7 +26,7 @@ public class HtmlToPdfService : IHtmlToPdfService
     private readonly IConverter _converter;
     private readonly IUmbracoContextAccessor _umbracoContextAccessor;
     private readonly IWWCacheService _cacheService;
-
+    
 
     private const string BodyHtml = "Body.cshtml";
     private const string HeaderHtml = "Header.cshtml";
@@ -49,26 +50,27 @@ public class HtmlToPdfService : IHtmlToPdfService
 
     /// <summary>
     /// Get the pdf as memorystream
-    /// This expects a PdfType which is also the folder in the Views/Pdf where the views need to be located. For instance: Views/Pdf/Invoice
+    /// This expects a pdfTheme which is also the folder in the Views/Pdf where the views need to be located. For instance: Views/Pdf/Invoice
     /// It expects a viewmodel which is passed to the view and when asked for to the header and footer.
-    /// In the pdfType folder three views can be located: Body.cshtml, Header.cshtml and Footer.cshtml
-    /// Body.cshtml is the main view and required. 
-    /// It is possible to pass a custom header and footer in the settings. When none are given, the default header and footer will be used.
+    /// In the pdfTheme folder three views can be located: Body.cshtml, Header.cshtml and Footer.cshtml
+    /// Body.cshtml is the main view and required. A custom header and footer are optional.
     /// The given viewmodel is passed to all three views.
     /// There are booleans to indicate no header and/or footer should be used.
+    /// An optional stylesheet can be passed to the pdf, it should be called pdfStyle.css 
+    /// and located in a subfolder with your pdfTheme name in the wwwroot/pdfThemes folder.
     /// </summary>
-    /// <param name="pdfType">Type of the pdf (name of subfolder of views/pdf that will be searched)</param>
+    /// <param name="pdfTheme">Type of the pdf (name of subfolder of views/pdf that will be searched)</param>
     /// <param name="viewName">Name of the view (in view/pdf/{type})</param>
     /// <param name="viewModel">Model to pass to view and if necessary to header and/or footer</param>
     /// <param name="settings">Settings of pdf</param>
     /// <returns>bool success </returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfType, object viewModel, HtmlToPdfSettings? settings = null)
+    public (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfTheme, object viewModel, HtmlToPdfSettings? settings = null)
     {
 
-        if (String.IsNullOrWhiteSpace(pdfType))
+        if (String.IsNullOrWhiteSpace(pdfTheme))
         {
-            throw new ArgumentNullException(nameof(pdfType));
+            throw new ArgumentNullException(nameof(pdfTheme));
         }
         if (viewModel == null)
         {
@@ -79,10 +81,18 @@ public class HtmlToPdfService : IHtmlToPdfService
         // when settings is null: use all defaultvalues
         settings ??= new HtmlToPdfSettings();
 
+        // if no stylesheet is given: check for existance of default stylesheet for pdfTheme and use that
+        if (String.IsNullOrWhiteSpace(settings.UserStyleSheet))
+        {
+            string styleSheet = Path.Combine(_webHostEnvironment.WebRootPath, "pdfThemes", $"{pdfTheme}", "pdfStyle.css");
+            if (File.Exists(styleSheet))
+            {
+                settings.UserStyleSheet = styleSheet;
+            }
+        }
 
         // check for existance of views
-        string contentRootPath = _webHostEnvironment.ContentRootPath;
-        string pdfPath = Path.Combine(contentRootPath, $"Views\\pdf\\{pdfType}\\");
+        string pdfPath = Path.Combine(_webHostEnvironment.ContentRootPath, $"Views\\pdf\\{pdfTheme}\\");
 
         if (!File.Exists($"{pdfPath}{BodyHtml}"))
         {
@@ -103,12 +113,12 @@ public class HtmlToPdfService : IHtmlToPdfService
 
             if (settings.UseHeaderHtml && String.IsNullOrWhiteSpace(settings.HeaderHtmlUrl))
             {
-                settings.HeaderHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/HtmlToPdfSurface/GetHeaderHtml?type={pdfType}";
+                settings.HeaderHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/HtmlToPdfSurface/GetHeaderHtml?type={pdfTheme}";
             }
 
             if (settings.UseFooterHtml && String.IsNullOrWhiteSpace(settings.FooterHtmlUrl))
             {
-                settings.FooterHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/HtmlToPdfSurface/GetFooterHtml?type={pdfType}";
+                settings.FooterHtmlUrl = $"{domain.EnsureEndsWith('/')}umbraco/WebwondersPdfGenerator/HtmlToPdfSurface/GetFooterHtml?type={pdfTheme}";
             }
         }
 

@@ -340,7 +340,7 @@ public class HtmlToPdfSettings
     public string DefaultEncoding { get; set; } = string.Empty;
 
     /// <summary>
-    /// Url or path to a user specified style sheet. Default = ""
+    /// Url or path to a user specified style sheet. Default = "webroot/pdfThemes/{yourPdfTheme}.css"
     /// </summary>
     public string UserStyleSheet { get; set; } = "";
 
@@ -392,7 +392,7 @@ public class HtmlToPdfSettings
     public double HeaderSpacing { get; set; } = 0.00;
 
     /// <summary>
-    /// Url for a HTML document to use for the header. Default = "pdfHeader.cshtml" under Views\Pdf\pdfType
+    /// Url for a HTML document to use for the header. Default = "pdfHeader.cshtml" under Views\Pdf\pdfTheme
     /// </summary>
     public string HeaderHtmlUrl { get; set; } = string.Empty;
 
@@ -438,7 +438,7 @@ public class HtmlToPdfSettings
     public double FooterSpacing { get; set; } = 0.00;
 
     /// <summary>
-    /// Url for a HTML document to use for the footer. Default = "pdfFooter.cshtml" under Views\Pdf\pdfType
+    /// Url for a HTML document to use for the footer. Default = "pdfFooter.cshtml" under Views\Pdf\pdfTheme
     /// </summary>
     public string FooterHtmlUrl { get; set; } = string.Empty;
 

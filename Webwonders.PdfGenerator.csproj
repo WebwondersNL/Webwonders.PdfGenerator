@@ -12,6 +12,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>WebwondersPDF.png</PackageIcon>
     <PackageTags>umbraco-marketplace;umbraco;umbraco cloud;pdf generator;pdf;wkhtmltopdfdotnet</PackageTags>
+    <PackageProjectUrl>https://github.com/WebwondersNL/Webwonders.PdfGenerator</PackageProjectUrl>
+    <Version>1.0.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
