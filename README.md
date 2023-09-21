@@ -61,4 +61,4 @@ if (success && stream != null)
 
 
 ## Note
-Do not use Webwonders.PdfGenerator with any untrusted HTML – be sure to sanitize any user-supplied HTML/JS, otherwise it can lead to complete takeover of the server it is running on.
+Do not use Webwonders.PdfGenerator with any untrusted HTML - be sure to sanitize any user-supplied HTML/JS, otherwise it can lead to complete takeover of the server it is running on.
