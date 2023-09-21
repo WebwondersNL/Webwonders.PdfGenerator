@@ -1,43 +1,24 @@
 {
   "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
-  "AddOnPackagesRequiredForUmbracoCloud": [],
-  "AlternateCategory": "",
   "AuthorDetails": {
     "Name": "Webwonders",
     "Description": "Webwonders is a digital agency and Umbraco Gold Partner based in Eindhoven, the Netherlands.",
     "Url": "https://www.webwonders.nl/",
     "ImageUrl": "https://www.webwonders.nl/Images/logo/WordmarkWW-orange.png",
-    "Contributors": [
-      {
-        "Name": "",
-        "Url": ""
-      }
-    ],
-    "SyncContributorsFromRepository": "true"
+    "Contributors": [],
+    "SyncContributorsFromRepository": true
   },
   "Category": "Developer Tools",
   "Description": "Generate PDF's from HTML-files on Umbraco Cloud. Webwonders.PdfGenerator is a wrapper around WkHtmlToPdfDotNet",
-  "DiscussionForumUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator/issues",
-  "DocumentationUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator#readme",
-  "LicenseTypes": [ "MIT" ],
   "IssueTrackerUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator/issues",
+  "DocumentationUrl": "https://github.com/WebwondersNL/Webwonders.PdfGenerator#readme",
+  "LicenseTypes": [ "Free" ],
   "IsSubPackageOf": "",
-  "PackageType": "Free",
+  "PackageType": "Package",
   "PackagesByAuthor": [],
-  "RelatedPackages": [
-    {
-      "GroupTitle": "",
-      "PackageId": "",
-      "Description": ""
-    }
-  ],
-  "Screenshots": [
-    {
-      "ImageUrl": "",
-      "Caption": ""
-    }
-  ],
-  "Tags": [ "PDF" ],
-  "Title": "Webwonders.PdfGenerator",
+  "RelatedPackages": [],
+  "Screenshots": [],
+  "Tags": [ "Umbraco Cloud", "PDF", "Generate PDF", "WkHtmlToPdfDotNet", "WkHtmlToPdf", "PDF Generator", "PDF Generator for Umbraco Cloud", "PDF Generator for Umbraco" ],
+  "Title": "Webwonders PDF generator",
   "VideoUrl": ""
 }
