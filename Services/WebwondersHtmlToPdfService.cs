@@ -19,14 +19,12 @@ public interface IHtmlToPdfService
 
 
 
-public class HtmlToPdfService : IHtmlToPdfService
+public class HtmlToPdfService(IWebHostEnvironment webHostEnvironment,
+						      IConverter converter,
+						      IUmbracoContextAccessor umbracoContextAccessor,
+						      IWWCacheService cacheService) : IHtmlToPdfService
 {
 
-    private readonly IWebHostEnvironment _webHostEnvironment;
-    private readonly IConverter _converter;
-    private readonly IUmbracoContextAccessor _umbracoContextAccessor;
-    private readonly IWWCacheService _cacheService;
-    
 
     private const string BodyHtml = "Body.cshtml";
     private const string HeaderHtml = "Header.cshtml";
@@ -34,38 +32,25 @@ public class HtmlToPdfService : IHtmlToPdfService
 
 
 
-    public HtmlToPdfService(IWebHostEnvironment webHostEnvironment,
-                            IConverter converter,
-                            IUmbracoContextAccessor umbracoContextAccessor,
-                            IWWCacheService cacheService)
-    {
-        _webHostEnvironment = webHostEnvironment;
-        _converter = converter;
-        _umbracoContextAccessor = umbracoContextAccessor;
-        _cacheService = cacheService;
-    }
 
-
-
-
-    /// <summary>
-    /// Get the pdf as memorystream
-    /// This expects a pdfTheme which is also the folder in the Views/Pdf where the views need to be located. For instance: Views/Pdf/Invoice
-    /// It expects a viewmodel which is passed to the view and when asked for to the header and footer.
-    /// In the pdfTheme folder three views can be located: Body.cshtml, Header.cshtml and Footer.cshtml
-    /// Body.cshtml is the main view and required. A custom header and footer are optional.
-    /// The given viewmodel is passed to all three views.
-    /// There are booleans to indicate no header and/or footer should be used.
-    /// An optional stylesheet can be passed to the pdf, it should be called pdfStyle.css 
-    /// and located in a subfolder with your pdfTheme name in the wwwroot/pdfThemes folder.
-    /// </summary>
-    /// <param name="pdfTheme">Type of the pdf (name of subfolder of views/pdf that will be searched)</param>
-    /// <param name="viewName">Name of the view (in view/pdf/{type})</param>
-    /// <param name="viewModel">Model to pass to view and if necessary to header and/or footer</param>
-    /// <param name="settings">Settings of pdf</param>
-    /// <returns>bool success </returns>
-    /// <exception cref="ArgumentNullException"></exception>
-    public (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfTheme, object viewModel, HtmlToPdfSettings? settings = null)
+	/// <summary>
+	/// Get the pdf as memorystream
+	/// This expects a pdfTheme which is also the folder in the Views/Pdf where the views need to be located. For instance: Views/Pdf/Invoice
+	/// It expects a viewmodel which is passed to the view and when asked for to the header and footer.
+	/// In the pdfTheme folder three views can be located: Body.cshtml, Header.cshtml and Footer.cshtml
+	/// Body.cshtml is the main view and required. A custom header and footer are optional.
+	/// The given viewmodel is passed to all three views.
+	/// There are booleans to indicate no header and/or footer should be used.
+	/// An optional stylesheet can be passed to the pdf, it should be called pdfStyle.css 
+	/// and located in a subfolder with your pdfTheme name in the wwwroot/pdfThemes folder.
+	/// </summary>
+	/// <param name="pdfTheme">Type of the pdf (name of subfolder of views/pdf that will be searched)</param>
+	/// <param name="viewName">Name of the view (in view/pdf/{type})</param>
+	/// <param name="viewModel">Model to pass to view and if necessary to header and/or footer</param>
+	/// <param name="settings">Settings of pdf</param>
+	/// <returns>bool success </returns>
+	/// <exception cref="ArgumentNullException"></exception>
+	public (bool success, MemoryStream? stream) GetPdfMemoryStream(string pdfTheme, object viewModel, HtmlToPdfSettings? settings = null)
     {
 
         if (String.IsNullOrWhiteSpace(pdfTheme))
@@ -78,13 +63,13 @@ public class HtmlToPdfService : IHtmlToPdfService
         }
 
 
-        // when settings is null: use all defaultvalues
+        // when settings is null: use all default values
         settings ??= new HtmlToPdfSettings();
 
         // if no stylesheet is given: check for existance of default stylesheet for pdfTheme and use that
         if (String.IsNullOrWhiteSpace(settings.UserStyleSheet))
         {
-            string styleSheet = Path.Combine(_webHostEnvironment.WebRootPath, "pdfThemes", $"{pdfTheme}", "pdfStyle.css");
+            string styleSheet = Path.Combine(webHostEnvironment.WebRootPath, "pdfThemes", $"{pdfTheme}", "pdfStyle.css");
             if (File.Exists(styleSheet))
             {
                 settings.UserStyleSheet = styleSheet;
@@ -92,7 +77,7 @@ public class HtmlToPdfService : IHtmlToPdfService
         }
 
         // check for existance of views
-        string pdfPath = Path.Combine(_webHostEnvironment.ContentRootPath, $"Views\\pdf\\{pdfTheme}\\");
+        string pdfPath = Path.Combine(webHostEnvironment.ContentRootPath, $"Views\\pdf\\{pdfTheme}\\");
 
         if (!File.Exists($"{pdfPath}{BodyHtml}"))
         {
@@ -107,7 +92,7 @@ public class HtmlToPdfService : IHtmlToPdfService
             throw new FileNotFoundException($"View not found: {pdfPath}{FooterHtml}");
         }
 
-        if (_umbracoContextAccessor.TryGetUmbracoContext(out IUmbracoContext? context) && context != null)
+        if (umbracoContextAccessor.TryGetUmbracoContext(out IUmbracoContext? context) && context != null)
         {
             var domain = context.CleanedUmbracoUrl.GetLeftPart(UriPartial.Authority);
 
@@ -139,7 +124,7 @@ public class HtmlToPdfService : IHtmlToPdfService
             if (settings.UseHeaderHtml || settings.UseFooterHtml)
             {
                 cacheKey = Guid.NewGuid().ToString();
-                _cacheService.InsertCacheItem<object>(cacheKey, () => { return viewModel; }, new TimeSpan(0, 10, 0)); // cache for 10 minutes, will be cleared after pdf is created
+                cacheService.InsertCacheItem<object>(cacheKey, () => { return viewModel; }, new TimeSpan(0, 10, 0)); // cache for 10 minutes, will be cleared after pdf is created
 
                 if (settings.UseHeaderHtml && !String.IsNullOrWhiteSpace(settings.HeaderHtmlUrl))
                 {
@@ -154,12 +139,12 @@ public class HtmlToPdfService : IHtmlToPdfService
 
             IDocument document = CreatePdfDocument(htmlString, settings);
 
-            byte[] pdf = _converter.Convert(document);
+            byte[] pdf = converter.Convert(document);
 
             // If cached: clear the cache
             if (settings.UseHeaderHtml || settings.UseFooterHtml)
             {
-                _cacheService.ClearCacheItem(cacheKey);
+                cacheService.ClearCacheItem(cacheKey);
             }
 
             if (pdf != null)
